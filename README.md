@@ -1,4 +1,3 @@
-````
 # FreshCart — E-Commerce Web Application
 
 ![React](https://img.shields.io/badge/React-18.x-61DAFB?style=for-the-badge&logo=react)
@@ -12,26 +11,26 @@ FreshCart is a modern, fully featured e-commerce single-page application built w
 
 ## Key Features
 
-* ** Authentication & Authorization:** User registration and secure login flow powered by Formik and Yup validation.
-* ** Dynamic Product Catalog:** Browse products by categories, search items, view top-selling products, and inspect detailed product pages.
-* ** Interactive Shopping Cart:** Add, remove, and update item quantities dynamically with real-time UI synchronization and feedback.
-* ** Wishlist Management:** Save favorite products to a personalized wishlist for quick access later.
-* ** Seamless Checkout:** Integration with payment checkout sessions for order processing.
-* ** Order Tracking:** View order histories specific to the authenticated user.
-* ** Fully Responsive UI:** Optimized layout across all screen sizes (Mobile, Tablet, Desktop) built using Tailwind CSS.
+- ** Authentication & Authorization:** User registration and secure login flow powered by Formik and Yup validation.
+- ** Dynamic Product Catalog:** Browse products by categories, search items, view top-selling products, and inspect detailed product pages.
+- ** Interactive Shopping Cart:** Add, remove, and update item quantities dynamically with real-time UI synchronization and feedback.
+- ** Wishlist Management:** Save favorite products to a personalized wishlist for quick access later.
+- ** Seamless Checkout:** Integration with payment checkout sessions for order processing.
+- ** Order Tracking:** View order histories specific to the authenticated user.
+- ** Fully Responsive UI:** Optimized layout across all screen sizes (Mobile, Tablet, Desktop) built using Tailwind CSS.
 
 ---
 
 ## Tech Stack
 
-* **Core Framework:** React.js (Powered by Vite)
-* **State Management & Caching:** TanStack Query (React Query) & React Context API
-* **Routing:** React Router DOM v6
-* **Styling:** Tailwind CSS & PostCSS
-* **HTTP Client:** Axios
-* **Form Handling:** Formik & Yup
-* **Authentication:** JWT (JSON Web Tokens) & `jwt-decode`
-* **UI Notifications:** React Hot Toast
+- **Core Framework:** React.js (Powered by Vite)
+- **State Management & Caching:** TanStack Query (React Query) & React Context API
+- **Routing:** React Router DOM v6
+- **Styling:** Tailwind CSS & PostCSS
+- **HTTP Client:** Axios
+- **Form Handling:** Formik & Yup
+- **Authentication:** JWT (JSON Web Tokens) & `jwt-decode`
+- **UI Notifications:** React Hot Toast
 
 ---
 
@@ -40,17 +39,19 @@ FreshCart is a modern, fully featured e-commerce single-page application built w
 Ensure you have **Node.js** installed on your system before proceeding.
 
 ### 1. Clone the Repository
+
 ```bash
 git clone [https://github.com/Youssef-W-Bashir/fresh-cart.git](https://github.com/Youssef-W-Bashir/fresh-cart.git)
 cd fresh-cart
-````
 
 ### 2. Install Dependencies
 
 Bash
 
 ```
+
 npm install
+
 ```
 
 ### 3. Run Development Server
@@ -58,7 +59,9 @@ npm install
 Bash
 
 ```
+
 npm run dev
+
 ```
 
 Open your browser and navigate to `http://localhost:5173`
@@ -68,7 +71,9 @@ Open your browser and navigate to `http://localhost:5173`
 Bash
 
 ```
+
 npm run build
+
 ```
 
 ## Project Structure
@@ -76,18 +81,20 @@ npm run build
 Plaintext
 
 ```
+
 fresh-cart/
-├── public/                 # Static public assets
+├── public/ # Static public assets
 ├── src/
-│   ├── assets/             # Component-specific images and icons
-│   ├── Components/         # Reusable UI components (Navbar, Cart, Products, etc.)
-│   ├── Context/            # Global React Contexts (UserContext, CartContext, WishListContext)
-│   ├── Hooks/              # Custom React Query Hooks (useCart, useWishList, etc.)
-│   ├── App.jsx             # Main Application Routing and Layout
-│   └── main.jsx            # Application Entry Point & Provider Setups
-├── index.html              # HTML Entry Template
-├── package.json            # Project Dependencies and Scripts
-└── vite.config.js          # Vite Configuration
+│ ├── assets/ # Component-specific images and icons
+│ ├── Components/ # Reusable UI components (Navbar, Cart, Products, etc.)
+│ ├── Context/ # Global React Contexts (UserContext, CartContext, WishListContext)
+│ ├── Hooks/ # Custom React Query Hooks (useCart, useWishList, etc.)
+│ ├── App.jsx # Main Application Routing and Layout
+│ └── main.jsx # Application Entry Point & Provider Setups
+├── index.html # HTML Entry Template
+├── package.json # Project Dependencies and Scripts
+└── vite.config.js # Vite Configuration
+
 ```
 
 ## Live Demo
@@ -104,3 +111,4 @@ Check out the live deployment hosted on Vercel:
 
 - **LinkedIn:** [youssef-waleed-beshir](https://www.linkedin.com/in/youssef-waleed-beshir/)
 - **GitHub:** [Youssef-W-Bashir](https://github.com/Youssef-W-Bashir)
+```
