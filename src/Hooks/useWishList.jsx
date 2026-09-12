@@ -1,17 +1,16 @@
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
-import React from "react";
 
 export default function useWishList() {
-  let headers = {
-    token: localStorage.getItem("userToken"),
-  };
-  
+  const token = localStorage.getItem("userToken");
+
   async function getRecentWishList() {
     let response = await axios.get(
       `https://ecommerce.routemisr.com/api/v1/wishlist`,
       {
-        headers: headers,
+        headers: {
+          token: localStorage.getItem("userToken"),
+        },
       },
     );
 
@@ -19,10 +18,10 @@ export default function useWishList() {
   }
 
   let response = useQuery({
-    queryKey: ["recentWishList"],
+    queryKey: ["recentWishList", token],
     queryFn: getRecentWishList,
     select: (data) => data?.data?.data,
-    enabled: !!headers.token,
+    enabled: !!token,
   });
 
   return response;
