@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import useGetOrders from "../../Hooks/useGetOrders";
 import Loading from "../Loading/Loading";
 
@@ -18,6 +18,10 @@ export default function AllOrders() {
   let sortedOrders = orders
     ? [...orders].sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))
     : [];
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="">

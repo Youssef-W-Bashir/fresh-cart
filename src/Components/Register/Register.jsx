@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
@@ -27,7 +27,6 @@ export default function Register() {
       navigate("/");
 
       setUserData(data.token);
-
     } catch (error) {
       setApiError(error.response.data.message);
       setLoading(false);
@@ -74,6 +73,10 @@ export default function Register() {
     validationSchema: validationSchema,
     onSubmit: register,
   });
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <>

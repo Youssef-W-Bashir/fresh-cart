@@ -6,19 +6,18 @@ import { useQueryClient } from "@tanstack/react-query";
 export let WishListContext = createContext();
 
 export default function WishListContextProvider({ children }) {
-  let headers = {
-    token: localStorage.getItem("userToken"),
-  };
-
   let queryClient = useQueryClient();
-
   const [wishListIds, setWishListIds] = useState([]);
+
+  const getHeaders = () => ({
+    token: localStorage.getItem("userToken"),
+  });
 
   async function deleteItemFromWishList(productId) {
     try {
       let { data } = await axios.delete(
         `https://ecommerce.routemisr.com/api/v1/wishlist/${productId}`,
-        { headers },
+        { headers: getHeaders() },
       );
 
       if (data?.status === "success") {
@@ -43,7 +42,7 @@ export default function WishListContextProvider({ children }) {
       let { data } = await axios.post(
         `https://ecommerce.routemisr.com/api/v1/wishlist`,
         { productId: productId },
-        { headers: headers },
+        { headers: getHeaders() },
       );
 
       if (data?.data) {
