@@ -54,10 +54,10 @@ export default function Navbar() {
 
     if (querySearch) {
       setSearch(querySearch);
-    } else if (location.pathname !== "/products") {
+    } else {
       setSearch("");
     }
-  }, [location.pathname, searchParams]);
+  }, [searchParams]);
 
   return (
     <>

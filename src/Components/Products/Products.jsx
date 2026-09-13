@@ -41,10 +41,6 @@ export default function Products() {
     );
   }
 
-  useEffect(() => {
-    setSearchParams({});
-  }, []);
-
   const [currentPage, setCurrentPage] = useState(1);
 
   let productsPerPage = 20;
@@ -69,7 +65,7 @@ export default function Products() {
   const handleResetFilters = () => {
     setSelectedCategory("all");
     setSortRatings("default");
-    setSearchParams({});
+    setSearchParams(new URLSearchParams());
   };
 
   return (
